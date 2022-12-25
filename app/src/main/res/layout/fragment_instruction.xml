@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="instructionViewModel"
+            type="com.udacity.shoestore.Instruction" />
+    </data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/horizontal_padding"
+        tools:context=".instruction">
+
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/style_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_1" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/style_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_2" />
+
+        <Button
+            android:id="@+id/shoe_list_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_list_button" />
+    </LinearLayout>
+</layout>

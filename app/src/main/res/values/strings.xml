@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+<!--    LOGIN SCREEN-->
+    <string name="fragment_login_title">Login</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+<!--    WELCOME SCREEN-->
+    <string name="fragment_welcome_title">Welcome</string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_text">Shoe Store lets you organize your shoe collection with ease</string>
+    <string name="welcome_text_2">Tap the button below to find out how</string>
+    <string name="instruction_button">Instructions</string>
+<!--    INSTRUCTION-->
+    <string name="fragment_instruction_title">Instructions</string>
+    <string name="instruction_1">Go to shoe detail</string>
+    <string name="instruction_2">Fill in appropriate fields</string>
+    <string name="shoe_list_button">Start</string>
+<!--    SHOE LIST-->
+    <string name="fragment_shoe_list_title">Shoe List</string>
+<!--SHOE DETAIL-->
+    <string name="fragment_shoe_detail_title">Shoe Detail</string>
+    <string name="shoe_name_label">Shoe Name</string>
+    <string name="company_label">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="save_button">Save</string>
+    <string name="cancel">Cancel</string>
+</resources>
