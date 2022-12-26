@@ -9,7 +9,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview"
@@ -41,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@={@string/shoe_name(shoe.name)}"
+                        android:text="@{shoe.name}"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="@dimen/body_text_size"
@@ -51,7 +53,7 @@
                         android:id="@+id/size_text"
                         style="@style/card_item_style"
                         android:layout_weight="1"
-                        android:text="@={@string/company(shoe.size)}" />
+                        android:text="@{Double.toString(shoe.size)}" />
 
                     <TextView
                         android:id="@+id/company_text"
@@ -59,7 +61,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@={@string/company(shoe.company)}" />
+                        android:text="@{shoe.company}" />
 
                     <TextView
                         android:id="@+id/description_text"
@@ -67,7 +69,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@{@string/description(shoe.description)}" />
+                        android:text="@{shoe.description}"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
