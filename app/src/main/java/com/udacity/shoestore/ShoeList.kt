@@ -28,7 +28,7 @@ class ShoeList : Fragment() {
         binding.shoeListViewModel = viewModel
         setHasOptionsMenu(true)
         binding.floatingActionButton.setOnClickListener {
-            findNavController().navigate(shoeListDirections.actionShoeListToShoeDetail())
+            findNavController().navigate(ShoeListDirections.actionShoeListToShoeDetail())
         }
 
         viewModel.shoesList.observe(viewLifecycleOwner, Observer { shoesList ->
@@ -46,7 +46,7 @@ class ShoeList : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        findNavController().navigate(shoeListDirections.actionShoeListToLogin())
+        findNavController().navigate(ShoeListDirections.actionShoeListToLogin())
         return super.onOptionsItemSelected(item)
     }
 }

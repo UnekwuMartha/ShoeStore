@@ -23,7 +23,7 @@ class Instruction : Fragment() {
         val binding: FragmentInstructionBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_instruction, container, false)
         binding.shoeListButton.setOnClickListener {
-            findNavController().navigate(instructionDirections.actionInstructionToShoeList())
+            findNavController().navigate(InstructionDirections.actionInstructionToShoeList())
         }
         return binding.root
     }

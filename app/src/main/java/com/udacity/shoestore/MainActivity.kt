@@ -5,26 +5,33 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import timber.log.Timber
 import com.udacity.shoestore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding : ActivityMainBinding
+    private val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+    private var navController = navHostFragment.navController
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(
+
+        binding = DataBindingUtil.setContentView(
             this,
             R.layout.activity_main
         )
-        val navController: NavController = this.findNavController(R.id.nav_host_fragment)
+
+        navController = navHostFragment.findNavController()
         NavigationUI.setupActionBarWithNavController(this, navController)
         Timber.plant(Timber.DebugTree())
     }
 
     override fun onNavigateUp(): Boolean {
-        val navController = this.findNavController((R.id.nav_host_fragment))
         return navController.navigateUp()
     }
 }

@@ -11,20 +11,16 @@ import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 class Login : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
         binding.signin.setOnClickListener {
-            findNavController().navigate(loginDirections.actionLoginToWelcome())
+            findNavController().navigate(LoginDirections.actionLoginToWelcome())
         }
         binding.signup.setOnClickListener {
-            findNavController().navigate(loginDirections.actionLoginToWelcome())
+            findNavController().navigate(LoginDirections.actionLoginToWelcome())
         }
         return binding.root
     }

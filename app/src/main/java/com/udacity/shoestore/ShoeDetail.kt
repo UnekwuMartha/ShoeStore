@@ -30,10 +30,10 @@ class ShoeDetail : Fragment() {
 
         binding.save.setOnClickListener {
             viewModel.addShoe()
-            findNavController().navigate(shoeDetailDirections.actionShoeDetailToShoeList())
+            findNavController().navigate(ShoeDetailDirections.actionShoeDetailToShoeList())
         }
         binding.cancel.setOnClickListener {
-            findNavController().navigate(shoeDetailDirections.actionShoeDetailToShoeList())
+            findNavController().navigate(ShoeDetailDirections.actionShoeDetailToShoeList())
         }
         return binding.root
     }
