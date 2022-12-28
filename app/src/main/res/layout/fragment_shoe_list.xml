@@ -16,6 +16,7 @@
         android:contentDescription="@string/fragment_instruction_title">
 
         <LinearLayout
+            android:id="@+id/shoe_list_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -28,11 +29,13 @@
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton"
+                android:layout_margin="@dimen/horizontal_margin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                app:srcCompat="@drawable/ic_add" />
+                app:srcCompat="@drawable/ic_add"
+                android:focusable="true" />
         </LinearLayout>
     </ScrollView>
 </layout>

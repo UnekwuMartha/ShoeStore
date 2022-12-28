@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
 import kotlin.collections.ArrayList
 
-class ShoesViewModel : ViewModel(), Observable {
+class ShoesViewModel : ViewModel() {
     var shoe: Shoe? = null
     private var shoes = mutableListOf<Shoe>()
     private var _shoesList = MutableLiveData<List<Shoe>>()
@@ -22,15 +22,8 @@ class ShoesViewModel : ViewModel(), Observable {
     }
 
     init {
-        shoe = Shoe("", 0.0, "", "")
         _shoesList.value = ArrayList()
     }
 
-    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        TODO("Not yet implemented")
-    }
+    fun resetShoe(){shoe = Shoe("", 0.0, "", "")}
 }

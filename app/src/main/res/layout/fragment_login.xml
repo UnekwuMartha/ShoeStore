@@ -16,7 +16,7 @@
         <EditText
             android:id="@+id/email_edit_text"
             style="@style/edit_text_style"
-            android:text="@string/email_label" />
+            android:hint="@string/email_label" />
 
         <EditText
             android:id="@+id/password_edit_text"

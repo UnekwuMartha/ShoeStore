@@ -19,15 +19,18 @@
         <EditText
             android:id="@+id/shoe_name"
             style="@style/edit_text_style"
+            android:hint="@string/shoe_name_label"
             android:text="@={shoesViewModel.shoe.name}" />
 
         <EditText
             android:id="@+id/company"
             style="@style/edit_text_style"
+            android:hint="@string/company_label"
             android:text="@={shoesViewModel.shoe.company}" />
 
         <EditText
             android:id="@+id/shoe_size"
+            android:hint="@string/shoe_size"
             android:inputType="number"
             style="@style/edit_text_style"
             android:text="@={`` + shoesViewModel.shoe.size}" />
@@ -35,6 +38,7 @@
         <EditText
             android:id="@+id/description"
             style="@style/edit_text_style"
+            android:hint="@string/description"
             android:text="@={shoesViewModel.shoe.description}" />
 
         <RelativeLayout
