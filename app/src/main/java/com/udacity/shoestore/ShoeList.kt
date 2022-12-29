@@ -23,14 +23,18 @@ class ShoeList : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        //declare and initialize binding object to use and inflate the correct layout
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
 
+        //helper functions
         observe(inflater, container)
         navigate()
 
         return binding.root
     }
 
+    //Observer function
     private fun observe(inflater: LayoutInflater, container: ViewGroup?) {
         viewModel.shoesList.observe(viewLifecycleOwner) { shoesList ->
             for (shoe in shoesList) {
@@ -43,6 +47,7 @@ class ShoeList : Fragment() {
         setHasOptionsMenu(true)
     }
 
+    //navigation function to navigate to correct layout and reset shoe object to empty value
     private fun navigate() {
         viewModel.resetShoe()
         binding.floatingActionButton.setOnClickListener {
@@ -50,13 +55,14 @@ class ShoeList : Fragment() {
         }
     }
 
-
+    //create options menu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu, menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) : Boolean {
+    //set menu item to logout and navigate to login screen
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu -> {
                 findNavController().navigate(ShoeListDirections.actionShoeListToLogin())

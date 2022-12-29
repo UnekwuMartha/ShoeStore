@@ -18,10 +18,12 @@ class Welcome : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
+        //set binding object to be of type Welcome binding, inflate correct layout
         val binding: FragmentWelcomeBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
+
+        //set button to navigate to correct fragment
         binding.instruction.setOnClickListener {
             findNavController().navigate(WelcomeDirections.actionWelcomeToInstruction())
         }

@@ -20,8 +20,12 @@ class Instruction : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        //declare and initialize binding object to use instruction binding, and inflate the correct layout
         val binding: FragmentInstructionBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_instruction, container, false)
+
+        //set shoe list button to navigate to correct fragment
         binding.shoeListButton.setOnClickListener {
             findNavController().navigate(InstructionDirections.actionInstructionToShoeList())
         }

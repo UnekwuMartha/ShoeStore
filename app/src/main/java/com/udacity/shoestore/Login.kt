@@ -15,10 +15,17 @@ class Login : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+
+        //declare and initialize binding object to use login binding class, and inflate the correct layout
+        val binding: FragmentLoginBinding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+
+        //set sign in button to navigate to correct fragment
         binding.signin.setOnClickListener {
             findNavController().navigate(LoginDirections.actionLoginToWelcome())
         }
+
+        //set sign up button to navigate to correct fragment
         binding.signup.setOnClickListener {
             findNavController().navigate(LoginDirections.actionLoginToWelcome())
         }
